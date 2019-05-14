@@ -1,16 +1,25 @@
 import java.util.ArrayList;
 
 public class Main {
-
     public static void main(String args[]) {
-
+    	//intro
+    	System.out.println("Welcome to the Government Escape java text game!");
+		System.out.println("You wake up in a strange government facility feeling sick and uneasy.");
+		System.out.println("After struggling to open your eyes, you look at your hands and see skin peeling away at exposed flesh.");
+		System.out.println("Horrified, you get up and realize you're locked in what seems to be a jail cell.");
+		System.out.println("You stumble over to the sink and take a look in the mirror. A muscular and bloody monster looks back at you.");
+		System.out.println("You're a zombie! How can this be! You suddenly have a strong desire to escape.");
+    	System.out.println("");
+    	System.out.println("Commands: take, look, i/inv, n, s, e, w, quit");
+    	System.out.println("");
+		
         // Build rooms
-        final int WIDTH = 2;
-        final int HEIGHT = 2;
+        final int WIDTH = 5;
+        final int HEIGHT = 3;
         Room[][] room = new Room[WIDTH][HEIGHT];
         Rooms.build(room, WIDTH, HEIGHT);
-        int x = 0;
-        int y = 0;
+        int x = 4;
+        int y = 2;
         Rooms.print(room, x, y);
 
         // Load inventory
@@ -59,8 +68,8 @@ public class Main {
             }
 
             // Get commands
-            else if (input.length() > 4  && input.substring(0, 4).equals("get ")) {
-            	if (input.substring(0, input.indexOf(' ')).equals("get")) {
+            else if (input.length() > 4  && input.substring(0, 4).equals("take")) {
+            	if (input.substring(0, input.indexOf(' ')).equals("take")) {
             		if (input.substring(input.indexOf(' ')).length() > 1) {
             			String item = input.substring(input.indexOf(' ') + 1);
                     	Inventory.checkItem(x, y, item, inventory, room);

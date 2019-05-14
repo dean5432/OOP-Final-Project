@@ -11,29 +11,79 @@ class Rooms {
             }
         }
 
-        room[0][0].setNumber(1);
-        room[0][0].setName("Living Room");
-        room[0][0].setDescription("You are in your living room.");
-        room[0][0].setItems("wallet");
-        room[0][0].setItems("remote");
+        //figure out how to lock this room until paper clip is used to pick lock
+        room[4][2].setNumber(1);
+        room[4][2].setName("Jail Cell");
+        room[4][2].setDescription("You are locked in a jail cell. You frantically search for something to escape with.");
+        room[4][2].setItems("paper clip");
+        room[4][2].setItems("broken glass shard");
+        
+        room[4][1].setNumber(2);
+        room[4][1].setName("Hallway");
+        room[4][1].setDescription("You are in a hallway that continues to your right. There is a wall to your left and a dark room in front of you.");
+        
+        room[4][0].setNumber(3);
+        room[4][0].setName("Lab Room");
+        room[4][0].setDescription("You see a scientist standing alone. He sees you and panics.");
+        room[4][0].setItems("scientist");
+        
+        room[3][0].setNumber(4);
+        room[3][0].setName("Power Room");
+        room[3][0].setDescription("You walk into a room with broken wires lying everywhere. You get shocked and instantly feel a burst of energy and strength.");
+        
+        room[3][1].setNumber(5);
+        room[3][1].setName("Hallway");
+        room[3][1].setDescription("You are in a hallway that continues to your left and right. There is a dark room in front of you and a lit one behind you.");
+        
+        room[3][2].setNumber(6);
+        room[3][2].setName("Surveillance Room");
+        room[3][2].setDescription("You walk into the surveillance room. A security guard instantly sees you and points his gun at you.");
+        room[3][2].setItems("Security Guard");
+        
+        room[2][2].setNumber(7);
+        room[2][2].setName("Power Room");
+        room[2][2].setDescription("You walk into a room with broken wires lying everywhere. You get shocked and instantly feel a burst of energy and strength. You see a wire cutter on the ground - could make a good weapon.");
+        room[2][2].setItems("wire cutter");
+        
+        room[2][1].setNumber(8);
+        room[2][1].setName("Hallway");
+        room[2][1].setDescription("You are in a hallway that continues to your left and right. There is a locked door in front of you and a dark room behind you.");
+        
+        //figure out how to "lock" this room and make the game end when you make it here
+        room[2][0].setNumber(9);
+        room[2][0].setName("Exit");
+        room[2][0].setDescription("You unlock the door and go outside. You escaped!");
+        
+        room[0][0].setNumber(10);
+        room[0][0].setName("Biohazard!");
+        room[0][0].setDescription("You unknowingly walk into a biohazard disposal room. The exposure to toxins slowly degrades your flesh. Run!");
 
-        room[0][1].setNumber(2);
-        room[0][1].setName("Bedroom");
-        room[0][1].setDescription("You are in your bedroom. Your closet is slightly ajar.");
+        room[0][1].setNumber(11);
+        room[0][1].setName("Hallway");
+        room[0][1].setDescription("You are in a hallway that continues to your left. There is a wall to your right and a dark room in front of you.");
         room[0][1].setItems("keys");
         room[0][1].setItems("flashlight");
 
-        room[1][0].setNumber(3);
-        room[1][0].setName("Kitchen");
-        room[1][0].setDescription("You are in your kitchen.");
-        room[1][0].setItems("pop tarts");
-        room[1][0].setItems("soda");
+        room[1][0].setNumber(12);
+        room[1][0].setName("Surveillance Room");
+        room[1][0].setDescription("You walk into the surveillance room. A security guard instantly sees you and points his gun at you.");
+        room[1][0].setItems("Security Guard");
 
-        room[1][1].setNumber(4);
-        room[1][1].setName("Bathroom");
-        room[1][1].setDescription("You are in your bathroom.");
-        room[1][1].setItems("toilet paper");
-        room[1][1].setItems("magazine");
+        room[1][1].setNumber(13);
+        room[1][1].setName("Hallway");
+        room[1][1].setDescription("You are in a hallway that continues to your left and right. There is a locked door in front of you and a dark room behind you.");
+        
+        room[1][2].setNumber(14);
+        room[1][2].setName("Lab Room");
+        room[1][2].setDescription("You see a scientist working with test tubes. He panics when he sees you, dropping a shiny key.");
+        room[1][2].setItems("scientist");
+        room[1][2].setItems("Key");
+        
+        room[0][2].setNumber(15);
+        room[0][2].setName("Surveillance Room");
+        room[0][2].setDescription("You see a security guard looking at camera footage. He sees you and points his gun at you.");
+        room[0][2].setItems("Security Guard");
+       
     }
 
     public static void print(Room[][] room, int x, int y) {
