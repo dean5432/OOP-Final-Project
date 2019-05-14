@@ -11,7 +11,6 @@ class Rooms {
             }
         }
 
-        //figure out how to lock this room until paper clip is used to pick lock
         room[4][2].setNumber(1);
         room[4][2].setName("Jail Cell");
         room[4][2].setDescription("You are locked in a jail cell. You frantically search for something to escape with.");
@@ -38,7 +37,7 @@ class Rooms {
         room[3][2].setNumber(6);
         room[3][2].setName("Surveillance Room");
         room[3][2].setDescription("You walk into the surveillance room. A security guard instantly sees you and points his gun at you.");
-        room[3][2].setItems("Security Guard");
+        room[3][2].setItems("security guard");
         
         room[2][2].setNumber(7);
         room[2][2].setName("Power Room");
@@ -53,6 +52,7 @@ class Rooms {
         room[2][0].setNumber(9);
         room[2][0].setName("Exit");
         room[2][0].setDescription("You unlock the door and go outside. You escaped!");
+        room[2][0].setItems("Freedom");
         
         room[0][0].setNumber(10);
         room[0][0].setName("Biohazard!");
@@ -61,13 +61,11 @@ class Rooms {
         room[0][1].setNumber(11);
         room[0][1].setName("Hallway");
         room[0][1].setDescription("You are in a hallway that continues to your left. There is a wall to your right and a dark room in front of you.");
-        room[0][1].setItems("keys");
-        room[0][1].setItems("flashlight");
 
         room[1][0].setNumber(12);
-        room[1][0].setName("Surveillance Room");
-        room[1][0].setDescription("You walk into the surveillance room. A security guard instantly sees you and points his gun at you.");
-        room[1][0].setItems("Security Guard");
+        room[1][0].setName("Security Office");
+        room[1][0].setDescription("You walk into a security office. A security guard instantly sees you and points his gun at you.");
+        room[1][0].setItems("security guard");
 
         room[1][1].setNumber(13);
         room[1][1].setName("Hallway");
@@ -77,18 +75,18 @@ class Rooms {
         room[1][2].setName("Lab Room");
         room[1][2].setDescription("You see a scientist working with test tubes. He panics when he sees you, dropping a shiny key.");
         room[1][2].setItems("scientist");
-        room[1][2].setItems("Key");
+        room[1][2].setItems("key");
         
         room[0][2].setNumber(15);
-        room[0][2].setName("Surveillance Room");
+        room[0][2].setName("Security Office");
         room[0][2].setDescription("You see a security guard looking at camera footage. He sees you and points his gun at you.");
-        room[0][2].setItems("Security Guard");
+        room[0][2].setItems("security guard");
        
     }
 
     public static void print(Room[][] room, int x, int y) {
 
-        System.out.println(room[x][y].getDescription());
+        System.out.println(room[x][y].toString());
         System.out.println("You see: " + room[x][y].getItems());
         System.out.println();
     }
@@ -146,4 +144,16 @@ class Room {
     public ArrayList<String> getItems() {
         return this.items;
     }
+    //2 overridden methods:
+    //The toString method automatically prints the description for the room
+    @Override
+    public String toString() { 
+        return description;
+    } 
+  //The toString method automatically prints the description for the room
+    @Override
+    public Room clone() { 
+        return new Room(number, name, description,
+                items);
+    } 
 }
