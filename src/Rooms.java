@@ -60,7 +60,7 @@ class Rooms {
 
         room[0][1].setNumber(11);
         room[0][1].setName("Hallway");
-        room[0][1].setDescription("You are in a hallway that continues to your left. There is a wall to your right and a dark room in front of you.");
+        room[0][1].setDescription("You are in a hallway that continues to your left. There is a wall to your right and a dark room in front of you. A lit room is also behind you.");
 
         room[1][0].setNumber(12);
         room[1][0].setName("Security Office");
@@ -69,7 +69,7 @@ class Rooms {
 
         room[1][1].setNumber(13);
         room[1][1].setName("Hallway");
-        room[1][1].setDescription("You are in a hallway that continues to your left and right. There is a locked door in front of you and a dark room behind you.");
+        room[1][1].setDescription("You are in a hallway that continues to your left and right. There is a lit room in front of you, but the room behind you is emitting a strange orange glow.");
         
         room[1][2].setNumber(14);
         room[1][2].setName("Lab Room");

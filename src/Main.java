@@ -8,7 +8,7 @@ public class Main {
 		System.out.println("After struggling to open your eyes, you look at your hands and see skin peeling away at exposed flesh.");
 		System.out.println("Horrified, you get up and realize you're locked in what seems to be a jail cell.");
 		System.out.println("You stumble over to the sink and take a look in the mirror. A muscular and bloody monster looks back at you.");
-		System.out.println("You're a zombie! How can this be! You suddenly have a strong desire to escape.");
+		System.out.println("You're a zombie! How can this be?! You suddenly have a strong desire to escape.");
     	System.out.println("");
     	System.out.println("Commands: take, use, look, inv, n, s, e, w, quit");
     	System.out.println("");
@@ -132,7 +132,7 @@ public class Main {
 
             // Catch-all for invalid input
             } else {
-                System.out.println("Please enter a valid command.");
+                System.out.println("You can't do that.");
             }
             
             if (x==2 && y==0 && haveKey==true) {
