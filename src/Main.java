@@ -94,6 +94,8 @@ public class Main {
             	if (input.equals("use paper clip") && inventory.contains("paper clip")) {
             		unlockedCell = true;
             		System.out.println("You pick the jail cell's lock. The door opens.");
+            	} else {
+            		System.out.println("You can't do that.");
             	}
             }
             else if ( (( input.length() > 0  && input.equals("use broken glass shard") && inventory.contains("broken glass shard")) || (input.length() > 0  && input.equals("use wire cutter") && inventory.contains("wire cutter")) )) {
@@ -117,6 +119,9 @@ public class Main {
             	else if (x==4 && y==0) {
                 	System.out.println("You kill the scientist in the room.");
                 	Rooms.removeItem(room, x, y, "scientist");
+            	}
+            	else {
+            		System.out.println("You can't do that.");
             	}
             	
             }
